@@ -17,10 +17,10 @@ import 'base_dialog.dart';
 /// );
 class NetworkGiffyDialog extends StatelessWidget {
   NetworkGiffyDialog({
-    Key key,
-    @required this.image,
-    @required this.title,
-    @required this.onOkButtonPressed,
+    Key? key,
+    required this.image,
+    required this.title,
+    required this.onOkButtonPressed,
     this.onCancelButtonPressed,
     this.description,
     this.onlyOkButton = false,
@@ -46,7 +46,7 @@ class NetworkGiffyDialog extends StatelessWidget {
   final Text title;
 
   /// Description text
-  final Text description;
+  final Text? description;
 
   /// Sets dialog to have only OK button.
   ///
@@ -57,12 +57,12 @@ class NetworkGiffyDialog extends StatelessWidget {
   /// Text for OK button.
   ///
   /// Default is `OK`.
-  final Text buttonOkText;
+  final Text? buttonOkText;
 
   /// Text for cancel button
   ///
   /// Default is `Cancel`.
-  final Text buttonCancelText;
+  final Text? buttonCancelText;
 
   /// Color of OK button.
   ///
@@ -93,7 +93,7 @@ class NetworkGiffyDialog extends StatelessWidget {
   /// Callback function to be called on when Cancel button is pressed.
   ///
   /// By default (or if set to null) closes the Giffy Dialog via `Navigator.of(context).pop()`.
-  final VoidCallback onCancelButtonPressed;
+  final VoidCallback? onCancelButtonPressed;
 
   /// Defines how Giffy Dialog will enter the screen.
   ///
